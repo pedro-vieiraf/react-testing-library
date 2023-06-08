@@ -6,7 +6,7 @@ import { NotFound } from '../pages';
 describe('Testes do NotFound', () => {
   it('Teste se a página contém um heading h2 com o texto Page requested not found', () => {
     renderWithRouter(<NotFound />);
-    const title = screen.getByRole('heading', { level: 2 });
+    const title = screen.getByRole('heading', { level: 2, name: 'Page requested not found' });
     expect(title).toBeInTheDocument();
   });
   it('Teste se a página mostra a imagem esperada', () => {
