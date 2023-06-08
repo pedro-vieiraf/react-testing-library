@@ -1,6 +1,7 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { act } from 'react-dom/test-utils';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
@@ -33,14 +34,14 @@ describe('Testes do App', () => {
     expect(history.location.pathname).toBe('/favorites');
   });
 
-  /* it('Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.', () => {
+  it('Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.', () => {
     const { history } = renderWithRouter(<App />);
     act(() => {
-      history.push('/found');
+      history.push('/abot');
     });
-    const takeNotFoundPage = screen.getByRole('heading', { level: 2 });
+    const takeNotFoundPage = screen.getByText('Page requested not found');
     expect(takeNotFoundPage).toBeInTheDocument();
-  }); */
+  });
 });
 
 // acessar os elementos da tela
