@@ -5,7 +5,7 @@ import {
   readFavoritePokemonIds,
   updateFavoritePokemon,
 } from './services/pokedexService';
-
+  
 import pokemonList from './data';
 import Routes from './routes';
 

@@ -9,6 +9,7 @@ describe('Testes do NotFound', () => {
     const title = screen.getByRole('heading', { level: 2, name: 'Page requested not found' });
     expect(title).toBeInTheDocument();
   });
+
   it('Teste se a página mostra a imagem esperada', () => {
     renderWithRouter(<NotFound />);
     const errorImg = screen.getByAltText('Pikachu crying because the page requested was not found');
